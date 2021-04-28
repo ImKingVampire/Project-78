@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body>
+        <button type="button"
+        onclick="nextSlide()">Next</button>
+        <br>
+        <img id="album" height="200px" src="https://cdn1.vectorstock.com/i/1000x1000/17/10/cute-boy-cartoon-standing-vector-1471710.jpg">
+        <h2 id="names">Nirav Bonde(me)</h2>
+        <script>
+            var myfamily = ["Nirav Bonde(me)","Harshala Bonde(My mother)","Prasanna Bonde(My father)"];
+            var images = ["https://cdn1.vectorstock.com/i/1000x1000/17/10/cute-boy-cartoon-standing-vector-1471710.jpg","https://cdn5.vectorstock.com/i/1000x1000/45/09/cute-cartoon-a-young-mother-vector-4414509.jpg","https://i.pinimg.com/originals/87/b8/3b/87b83ba77a10a1d3313ed7872918524d.jpg"];
+            var i = 0;
+            function nextSlide(){
+  document.getElementById("album").src = images[i];
+  document.getElementById("names").innerHTML=myfamily[i];
+  i++;
+  if (i>2)
+  {
+      i=0;
+  }
+            }
+        </script>
+    </body>
+</html>
